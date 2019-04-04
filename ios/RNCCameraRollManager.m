@@ -202,7 +202,7 @@ RCT_EXPORT_METHOD(getPhotos:(NSDictionary *)params
 
   // Predicate for fetching assets within a collection
   PHFetchOptions *const assetFetchOptions = [RCTConvert PHFetchOptionsFromMediaType:mediaType];
-  assetFetchOptions.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:NO]];
+  assetFetchOptions.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"modificationDate" ascending:NO]];
 
   BOOL __block foundAfter = NO;
   BOOL __block hasNextPage = NO;
